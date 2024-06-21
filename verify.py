@@ -32,4 +32,28 @@ def q3_verify(sports, *args):
         return True
 
 
-print(q3_verify(sports, a2, a3, a4, a6))
+# print(q3_verify(sports, a2, a3, a4, a6))
+
+
+# ------ BREAK ------
+
+raj = ["Beer", "Cat Litter"]
+alanis = ["Detergent", "Beer"]
+chelsea = ["Cat Litter"]
+
+
+def q4_verify(*args):
+    args_list = []
+    for arg in args:
+        for ele in arg:
+            args_list.append(ele)
+    args_list_len = len(args_list)
+    args_set = set(args_list)
+    args_set_len = len(args_set)
+    if args_list_len == args_set_len:
+        return True
+    elif args_list_len != args_set_len:
+        return False
+
+
+print(q4_verify(alanis, chelsea))
